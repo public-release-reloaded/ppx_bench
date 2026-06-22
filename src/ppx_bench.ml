@@ -358,6 +358,7 @@ module E = struct
                in
                pack2 with_index_or_parameterized)
             ~expr:__
+            ~constraint_:drop
           ^:: nil)
        ^:: nil)
   ;;
@@ -425,6 +426,7 @@ module E = struct
              (value_binding
                 ~pat:(Attribute.pattern name_suffix (pstring __))
                 ~expr:(pexp_pack __)
+                ~constraint_:drop
               ^:: nil)
            ^:: nil))
       (expand_bench_module ~is_let_bench_module:true)

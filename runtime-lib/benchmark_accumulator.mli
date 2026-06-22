@@ -7,8 +7,6 @@
     in a [inline_benchmarks_runner.exe]. To avoid building this hashtable in cases where
     we will not use it, this module peeks into the commandline args of the running program
     to decide if the benchmarks should be registered or not. *)
-open! Stdppx
-
 module Current_libname : sig
   val set : string -> unit
   val unset : unit -> unit
